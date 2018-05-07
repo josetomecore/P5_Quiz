@@ -13,7 +13,7 @@ router.get('/credits', function(req, res, next) {
 });
 router.get('/quizzes', function(req, res, next) {
 	
-       quizzes[i]=models.quiz.findAll;
+       
 	
   res.render('quizzes', {quizzes});
 });
