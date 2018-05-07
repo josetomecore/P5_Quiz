@@ -15,7 +15,7 @@ router.get('/quizzes', function(req, res, next) {
 	
        
 	
-  res.render('quizzes', {quizzes});
+  res.render('quizzes');
 });
 
 
