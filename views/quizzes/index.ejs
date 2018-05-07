@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Lista de Quizzes</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>LISTA DE QUIZZES</h1>
-    <p></p>
+    <h1>Lista de quizzes</h1>
+    <% for (var i in quizzes) { 
+       quiz=quizzes[i] %>
+       <p><%= quiz.question %> : <%= quiz.question %></p>
+  
+        <% } %>
   </body>
-</html>
+</html> 
