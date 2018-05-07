@@ -13,21 +13,7 @@ router.get('/credits', function(req, res, next) {
 });
 router.get('/quizzes', function(req, res, next) {
 	
-       quizzes=[
-      { question:"capital de italia", answer:"roma"},
-       {
-    
-
-      question:"capital de francia", answer:"paris"
-  },
-  {
-    question:"capital de españa", answer:"madrid"
-  },
-  {
-    question:"capital de portugal", answer:"lisboa"
-  }
-
-])
+       quizzes[i]=models.quiz.findAll;
 	
   res.render('quizzes', {quizzes});
 });
