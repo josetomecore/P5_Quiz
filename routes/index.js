@@ -1,6 +1,8 @@
 var express = require('express');
 var {models} = require('../models/index');
 var router = express.Router();
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize("sqlite:quizzes.sqlite", {logging: false});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,21 +12,23 @@ router.get('/credits', function(req, res, next) {
   res.render('credits');
 });
 router.get('/quizzes', function(req, res, next) {
-	quizzes =[
-      { question:"Pregunta numero 1", answer:"roma"},
+	
+       quizzes=[
+      { question:"capital de italia", answer:"roma"},
        {
     
 
-      question:"Pregunta numero 2", answer:"paris"
+      question:"capital de francia", answer:"paris"
   },
   {
-    question:"Pregunta numero 3", answer:"madrid"
+    question:"capital de españa", answer:"madrid"
   },
   {
-    question:"Pregunta numero 4", answer:"lisboa"
+    question:"capital de portugal", answer:"lisboa"
   }
 
-];
+])
+	
   res.render('quizzes', {quizzes});
 });
 
