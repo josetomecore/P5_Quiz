@@ -11,17 +11,17 @@ router.get('/credits', function(req, res, next) {
 });
 router.get('/quizzes', function(req, res, next) {
 	quizzes =[
-      { question:"capital de italia", answer:"roma"},
+      { question:"Pregunta numero 1", answer:"roma"},
        {
     
 
-      question:"capital de francia", answer:"paris"
+      question:"Pregunta numero 2", answer:"paris"
   },
   {
-    question:"capital de españa", answer:"madrid"
+    question:"Pregunta numero 3", answer:"madrid"
   },
   {
-    question:"capital de portugal", answer:"lisboa"
+    question:"Pregunta numero 4", answer:"lisboa"
   }
 
 ];
