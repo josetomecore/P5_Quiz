@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,10 +7,14 @@
   </head>
   <body>
     <h1>Lista de quizzes</h1>
-    <% for (var i in quizzes) { 
-       quiz=quizzes[i] %>
-       <p> Pregunte numero <%= i %> <%= quiz.question %> : <%= quiz.answer %></p>
-  
-        <% } %>
+    <ul>
+      <%for(let i in quizzes){ %>
+      <% let quiz=quizzes[i];%>
+      <li><%=quiz.question %>:<%=quiz.answer %></li>
+
+      <%}%>
+    </ul>
+   
   </body>
 </html> 
+

@@ -12,10 +12,12 @@ router.get('/credits', function(req, res, next) {
   res.render('credits');
 });
 router.get('/quizzes', function(req, res, next) {
+	models.quiz.findAll().
+	then(quizzes=>{
+ res.render('quizzes',{quizzes});})
+       
 	
-       quizzes[i]=models.quiz.findAll;
-	
-  res.render('quizzes', {quizzes});
+ 
 });
 
 

@@ -1,4 +1,3 @@
-
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize("sqlite:quizzes.sqlite", {logging: false});
 
@@ -25,8 +24,8 @@ sequelize.define('quiz', {
 });
 
 sequelize.sync()
-
-.then(()=> {
+.then(() => sequelize.models.quiz.count())
+.then(count => {
 
   if (!count) {
     return sequelize.models.quiz.bulkCreate([
