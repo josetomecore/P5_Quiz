@@ -25,8 +25,8 @@ sequelize.define('quiz', {
 });
 
 sequelize.sync()
-.then(() => sequelize.models.quiz.count())
-.then(count => {
+
+.then(()=> {
 
   if (!count) {
     return sequelize.models.quiz.bulkCreate([
